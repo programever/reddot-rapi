@@ -1,8 +1,17 @@
 {
     "name": "programever/reddot-rapi",
-    "description": "Reddot - Redirect Payment API",
     "type": "magento2-module",
-    "version": "1.0.0",
+    "description": "Reddot - Redirect Payment API",
+    "keywords": ["reddotpayment", "reddot", "payment"],
+    "homepage": "https://github.com/programever/reddotpayment",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "authors": [{
+        "name": "Reddot",
+        "email": "developer@reddotpayment.com"
+    }],
     "require": {
         "php": "~7.0.0",
         "magento/module-sales": "100.0.*",
@@ -11,6 +20,12 @@
         "magento/framework": "100.0.*",
         "magento/magento-composer-installer": "100.0.*"
     },
+    "autoload": {
+        "files": ["registration.php"],
+        "psr-4": {
+            "Reddot\\Rapi\\": ""
+        }
+    },
     "repositories": [{
         "type": "composer",
         "url": "http://packages.magento.com/"
@@ -18,18 +33,5 @@
         "type": "vcs",
         "url": "https://github.com/programever/reddot-rapi"
     }],
-    "license": [
-        "OSL-3.0",
-        "AFL-3.0"
-    ],
-    "autoload": {
-        "files": ["registration.php"],
-        "psr-4": {
-            "Reddot\\Rapi\\": ""
-        }
-    },
-    "authors": [{
-        "name": "Reddot",
-        "email": "developer@reddotpayment.com"
-    }]
+    "version": "1.0.0"
 }
