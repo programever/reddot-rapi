@@ -1,0 +1,8 @@
+<fieldset data-bind="attr: {class: 'fieldset payment items ' + getCode(), id: 'payment_form_' + getCode()}">
+    <div class="field" data-bind="attr: {id: getCode() + '_note'}">
+        <label data-bind="attr: {for: getCode() + '_note'}" class="label">
+            <span><!-- ko i18n: 'Note'--><!-- /ko --></span>
+        </label>
+        <textarea type="textarea" name="payment[note]" rows="5" placeholder="Input your note..." data-bind="value: note" />
+    </div>
+</fieldset>

@@ -1,0 +1,17 @@
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <!-- Create -->
+    <route url="/V1/rapiCallback" method="POST">
+        <service class="Reddot\Rapi\Api\CustomRepositoryInterface" method="rapiCallback"/>
+        <resources>
+             <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <route url="/V1/rapiGetRedirectUrl" method="POST">
+        <service class="Reddot\Rapi\Api\CustomRepositoryInterface" method="rapiGetRedirectUrl"/>
+        <resources>
+             <resource ref="anonymous"/>
+        </resources>
+    </route>
+</routes>
